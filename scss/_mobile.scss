@@ -1,9 +1,15 @@
 //Widescreens
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 //Desktops and laptops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 //Tablets
@@ -60,6 +66,10 @@
 
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 //Smartphones
@@ -69,5 +79,8 @@
   }
   .menu-nav {
     width: 100%;
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

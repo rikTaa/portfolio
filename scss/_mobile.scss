@@ -3,6 +3,16 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper>* {
+    padding: 2em;
+  }
+
 }
 
 //Desktops and laptops
@@ -10,6 +20,16 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper>* {
+    padding: 2em;
+  }
+
 }
 
 //Tablets
@@ -77,9 +97,11 @@
   main#home h1 {
     margin-top: 8vh;
   }
+
   .menu-nav {
     width: 100%;
   }
+
   .projects {
     grid-template-columns: 1fr;
   }

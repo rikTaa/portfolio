@@ -4,7 +4,8 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-out; }
+  transition: all 0.5s ease-out;
+  z-index: 6; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -25,7 +26,8 @@
   top: 0;
   width: 100%;
   opacity: 0.9;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 5; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
@@ -134,7 +136,7 @@ a {
   color: #fff;
   text-decoration: none; }
 
-header {
+.content {
   position: fixed;
   z-index: 2;
   width: 100%; }
@@ -193,24 +195,51 @@ main {
       border-color: #40916c;
       transition: all 0.5s ease-out; }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px white solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em; }
+  .container ul {
+    list-style: none;
+    padding: 0; }
+  .container .wrapper {
+    box-shadow: 0 0 20px 0 rgba(64, 145, 108, 0.7);
+    z-index: 0; }
+  .container .wrapper > * {
+    padding: 1em; }
+  .container .user-info {
+    background: #40916c; }
+    .container .user-info h3,
+    .container .user-info ul {
+      text-align: center;
+      margin: 0 0 1rem 0; }
+  .container .contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; }
+    .container .contact form label {
+      display: block; }
+    .container .contact form p {
+      margin: 0; }
+    .container .contact form .full {
+      grid-column: 1 / 3; }
+    .container .contact form button,
+    .container .contact form input,
+    .container .contact form textarea {
+      width: 100%;
+      padding: 1em;
+      border: 1px solid #40916c; }
+    .container .contact form button {
       background: #40916c;
-      color: #000; }
-      .boxes div:hover span {
-        color: #000; }
+      border: 0;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer; }
+      .container .contact form button:hover {
+        background: #fff;
+        color: #444;
+        transition: all 0.5s ease-out; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -238,11 +267,21 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr; }
+  .wrapper > * {
+    padding: 2em; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr; }
+  .wrapper > * {
+    padding: 2em; } }
 
 @media screen and (max-width: 768px) {
   main {

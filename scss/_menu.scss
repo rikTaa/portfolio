@@ -6,6 +6,7 @@
   top: 35px;
   cursor: pointer;
   @include easeOut;
+  z-index: 6;
 
   .btn-line {
     width: 28px;
@@ -20,14 +21,17 @@
     transform: rotate(180deg);
 
     .btn-line {
+
       //Line 1
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
+
       //Line 2
       &:nth-child(2) {
         opacity: 0;
       }
+
       //Line 3
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
@@ -44,6 +48,7 @@
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
+  z-index: 5;
 
   &.show {
     visibility: visible;
@@ -105,7 +110,7 @@
       transform: translate3d(0, 0, 0);
     }
 
-    &.current > a {
+    &.current>a {
       color: $secondary-color;
     }
   }
@@ -120,6 +125,7 @@
     color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
+
     &:hover {
       color: $secondary-color;
     }

@@ -109,8 +109,15 @@ main {
 
   .job {
     background: lighten($primary-color, 5);
-    padding: 0.5 rem;
+    padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+
+  .link {
+    &:hover {
+      color: $secondary-color;
+      @include easeOut;
+    }
   }
 }
 
